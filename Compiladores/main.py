@@ -104,6 +104,59 @@ def exemplo_simples():
         print(f"  '{email}' → {status}")
 
 
+def menu_principal():
+    """Menu principal que permite escolher entre diferentes tipos de teste"""
+    print("\n" + "=" * 70)
+    print("🎯 COMPILADOR DE EXPRESSÕES REGULARES - MENU PRINCIPAL")
+    print("=" * 70)
+    print("Escolha o tipo de teste que deseja executar:")
+    print()
+    print("1. 🔧 Teste dos autômatos básicos (regex para DFA)")
+    print("2. 🔬 Análise léxica da linguagem proposta")
+    print("3. 📚 Executar ambos os testes")
+    print("4. ❌ Sair")
+    print()
+    
+    while True:
+        opcao = input("Digite sua opção (1-4): ").strip()
+        
+        if opcao == "1":
+            print("\n🔧 EXECUTANDO TESTES DOS AUTÔMATOS BÁSICOS...")
+            main()
+            exemplo_simples()
+            break
+        elif opcao == "2":
+            print("\n🔬 INICIANDO ANÁLISE LÉXICA DA LINGUAGEM PROPOSTA...")
+            try:
+                from teste_analise_lexica import main as teste_main
+                teste_main()
+            except ImportError as e:
+                print(f"❌ Erro ao carregar módulo de teste: {e}")
+                print("Certifique-se de que o arquivo 'teste_analise_lexica.py' está presente")
+            break
+        elif opcao == "3":
+            print("\n📚 EXECUTANDO TODOS OS TESTES...")
+            print("\n" + "=" * 50)
+            print("🔧 PRIMEIRA PARTE: AUTÔMATOS BÁSICOS")
+            print("=" * 50)
+            main()
+            exemplo_simples()
+            
+            print("\n" + "=" * 50)
+            print("🔬 SEGUNDA PARTE: ANÁLISE LÉXICA DA LINGUAGEM")
+            print("=" * 50)
+            try:
+                from teste_analise_lexica import main as teste_main
+                teste_main()
+            except ImportError as e:
+                print(f"❌ Erro ao carregar módulo de teste: {e}")
+            break
+        elif opcao == "4":
+            print("👋 Saindo do programa. Até logo!")
+            return
+        else:
+            print("❌ Opção inválida. Digite um número de 1 a 4.")
+
+
 if __name__ == "__main__":
-    main()
-    exemplo_simples()
+    menu_principal()

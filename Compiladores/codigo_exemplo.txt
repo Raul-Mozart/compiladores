@@ -1,0 +1,49 @@
+// PROGRAMA DE EXEMPLO - Linguagem Proposta
+// Testando todos os tipos de tokens
+
+var int idade as 25;
+var float altura as 1.75;
+var string nome as "João Silva";
+var bool ativo as true;
+var list numeros as [1, 2, 3, 4, 5];
+
+function string verificarIdade(idade) {
+    if (idade >= 18) {
+        return "Maior de idade";
+    } else if (idade >= 13) {
+        return "Adolescente";  
+    } else {
+        return "Criança";
+    }
+}
+
+function float calcularMedia(a, b, c) {
+    var float soma as a + b + c;
+    var float media as soma / 3.0;
+    return media;
+}
+
+class Pessoa {
+    var string nome as "";
+    var int idade as 0;
+    
+    function void setNome(novoNome) {
+        nome = novoNome;
+    }
+}
+return
+
+// Programa principal
+var int numeroA as 10;
+var int numeroB as 20; 
+var float resultado as calcularMedia(numeroA, numeroB, 15);
+
+if (resultado > 15.0 and numeroA != numeroB) {
+    print("Resultado válido: " + resultado);
+} else {
+    print("Resultado inválido");
+}
+
+for int i in 1 .. 5 {
+    print("Número: " + i);
+}
