@@ -1,0 +1,10 @@
+// PROGRAMA COM TOKENS INVÁLIDOS (PARA DEMONSTRAR DETECÇÃO DE ERROS)
+
+var int idade as 25;
+var string nome as "João";
+var int valor@ as 100;        // @ é caractere inválido
+var float altura as 1.75;
+var 中文变量 as "teste";         // Caracteres chineses inválidos
+var string texto as "sem fechar aspas
+var bool flag as true;
+var int outro# as 50;         // # é caractere inválido

@@ -1,0 +1,13 @@
+// TESTE DE VALIDACAO SEMANTICA
+// Casos que DEVEM gerar erro semantico
+
+var int idade as b;          // ERRO: 'b' e identificador, nao literal int
+var float altura as nome;    // ERRO: 'nome' e identificador, nao literal float  
+var string texto as 123;     // ERRO: 123 e literal int, nao string
+var bool flag as "false";    // ERRO: "false" e string, nao bool literal
+
+// Casos que NAO devem gerar erro
+var int numeroValido as 42;
+var float alturaValida as 1.75;
+var string nomeValido as "Joao";
+var bool ativoValido as true;

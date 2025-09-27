@@ -1,0 +1,53 @@
+// PROGRAMA EXEMPLO NA LINGUAGEM ESPECIFICADA
+// Demonstra todos os tipos de tokens
+
+var int idade as 25;
+var float altura as 1.75;
+var string nome as "João Silva";
+var string cidade as "São Paulo";
+var bool ativo as true;
+var bool inativo as false;
+
+function int calcularIdade(anoNascimento) {
+    var int anoAtual as 2023;
+    var int resultado as anoAtual - anoNascimento;
+    return resultado;
+}
+
+function bool ehMaiorIdade(idade) {
+    if (idade >= 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Programa principal
+var int anoNasc as 1995;
+var int idadeCalculada as calcularIdade(anoNasc);
+var bool maior as ehMaiorIdade(idadeCalculada);
+
+if (maior and ativo) {
+    var string mensagem as "Usuário ativo e maior de idade";
+    print(mensagem);
+} else {
+    print("Condições não atendidas");
+}
+
+for int i in 1 .. 5 {
+    var string msg as "Iteração número: ";
+    print(msg + i);
+}
+
+// Exemplo com operadores
+var int a as 10;
+var int b as 5;
+var int soma as a + b;
+var int subtracao as a - b;
+var int multiplicacao as a * b;
+var int divisao as a / b;
+var bool comparacao as (a > b) and (soma != divisao);
+
+// Exemplo com arrays (lista)
+var list numeros as [1, 2, 3, 4, 5];
+var string textos as "Fim do programa";
